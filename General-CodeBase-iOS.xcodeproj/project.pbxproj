@@ -14,8 +14,8 @@
 		3544DFF72486368C00B74423 /* General_CodeBase_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3544DFF52486368C00B74423 /* General_CodeBase_iOS.xcdatamodeld */; };
 		3544DFF92486368D00B74423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3544DFF82486368D00B74423 /* Assets.xcassets */; };
 		3544DFFC2486368D00B74423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3544DFFA2486368D00B74423 /* LaunchScreen.storyboard */; };
-		3544E0072486368E00B74423 /* General_CodeBase_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544E0062486368E00B74423 /* General_CodeBase_iOSTests.swift */; };
-		3544E0122486368E00B74423 /* General_CodeBase_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544E0112486368E00B74423 /* General_CodeBase_iOSUITests.swift */; };
+		3544E0072486368E00B74423 /* GeneralCodeBaseiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544E0062486368E00B74423 /* GeneralCodeBaseiOSTests.swift */; };
+		3544E0122486368E00B74423 /* GeneralCodeBaseiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3544E0112486368E00B74423 /* GeneralCodeBaseiOSUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,10 @@
 		3544DFFB2486368D00B74423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3544DFFD2486368D00B74423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3544E0022486368D00B74423 /* General-CodeBase-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "General-CodeBase-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3544E0062486368E00B74423 /* General_CodeBase_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General_CodeBase_iOSTests.swift; sourceTree = "<group>"; };
+		3544E0062486368E00B74423 /* GeneralCodeBaseiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCodeBaseiOSTests.swift; sourceTree = "<group>"; };
 		3544E0082486368E00B74423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3544E00D2486368E00B74423 /* General-CodeBase-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "General-CodeBase-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3544E0112486368E00B74423 /* General_CodeBase_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = General_CodeBase_iOSUITests.swift; sourceTree = "<group>"; };
+		3544E0112486368E00B74423 /* GeneralCodeBaseiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCodeBaseiOSUITests.swift; sourceTree = "<group>"; };
 		3544E0132486368E00B74423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,7 +116,7 @@
 		3544E0052486368D00B74423 /* General-CodeBase-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				3544E0062486368E00B74423 /* General_CodeBase_iOSTests.swift */,
+				3544E0062486368E00B74423 /* GeneralCodeBaseiOSTests.swift */,
 				3544E0082486368E00B74423 /* Info.plist */,
 			);
 			path = "General-CodeBase-iOSTests";
@@ -125,7 +125,7 @@
 		3544E0102486368E00B74423 /* General-CodeBase-iOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3544E0112486368E00B74423 /* General_CodeBase_iOSUITests.swift */,
+				3544E0112486368E00B74423 /* GeneralCodeBaseiOSUITests.swift */,
 				3544E0132486368E00B74423 /* Info.plist */,
 			);
 			path = "General-CodeBase-iOSUITests";
@@ -141,6 +141,7 @@
 				3544DFE52486368C00B74423 /* Sources */,
 				3544DFE62486368C00B74423 /* Frameworks */,
 				3544DFE72486368C00B74423 /* Resources */,
+				35A6438724891C8D0058793F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -257,6 +258,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35A6438724891C8D0058793F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then \nswiftlint \nelse \necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\" \nfi \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3544DFE52486368C00B74423 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -273,7 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3544E0072486368E00B74423 /* General_CodeBase_iOSTests.swift in Sources */,
+				3544E0072486368E00B74423 /* GeneralCodeBaseiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3544E0122486368E00B74423 /* General_CodeBase_iOSUITests.swift in Sources */,
+				3544E0122486368E00B74423 /* GeneralCodeBaseiOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
